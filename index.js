@@ -483,12 +483,16 @@
                 // if (this.touchController) {
                 //     this.outerContainerEl.appendChild(this.touchController);
                 // }
+
                 document.body.style.zoom = "250%"
                 this.playing = true;
                 this.activated = true;
                 var hScore = document.cookie;
-                hScore = hScore.split(10, hScore.length)
+                hScore = hScore.split(10, hScore.length - 1)
+                alert(hScore);
+                hScore = parseInt(hScore);
                 this.distanceMeter.setHighScore(hScore);
+
             } else if (this.crashed) {
                 this.restart();
             }
