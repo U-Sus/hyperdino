@@ -486,6 +486,9 @@
                 document.body.style.zoom = "250%"
                 this.playing = true;
                 this.activated = true;
+                var hScore = document.cookie;
+                hScore = hScore.split(10, hScore.length)
+                this.distanceMeter.setHighScore(hScore);
             } else if (this.crashed) {
                 this.restart();
             }
